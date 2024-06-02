@@ -1,0 +1,73 @@
+<!--&lt;!&ndash; error.html &ndash;&gt;-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Error</title>-->
+<!--    <script>-->
+<!--        // Redirect to the home page after 5 seconds-->
+<!--        setTimeout(function() {-->
+<!--            window.location.href = "/";-->
+<!--        }, 5000); // 5000 milliseconds = 5 seconds-->
+<!--    </script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Error: {{.Code}}</h1>-->
+<!--<p>{{.Message}}</p>-->
+<!--<p>You will be redirected to the home page shortly...</p>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 500</title>
+        <script>
+            // Redirect to the home page after 5 seconds
+            setTimeout(function() {
+                window.location.href = "/";
+            }, 8000); // 5000 milliseconds = 5 seconds
+        </script>
+   <style>
+
+       body {
+           background-color: black;
+           font-family: sans-serif;
+           margin: 0;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           min-height: 100vh;
+       }
+
+       .container {
+           text-align: center;
+           color: white;
+       }
+
+       h1,
+       h2 {
+           margin: 0;
+           padding: 0;
+       }
+
+
+   </style>
+</head>
+<body>
+<div class="container">
+    <h1>ERROR</h1>
+    <h2>{{.Code}}</h2>
+    <p>{{.Message}}</p>
+    <p>Uh oh, there seems to be a problem.</p>
+    <p>Let me help you find a way out.</p>
+    <p>You will be redirected to the home page shortly...</p>
+
+</div>
+
+</body>
+</html>
