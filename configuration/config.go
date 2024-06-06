@@ -7,6 +7,7 @@ import (
 )
 
 func Open() (*gorm.DB, error) {
+
 	s, err := Connect()
 	if err != nil {
 		return nil, err
@@ -14,6 +15,7 @@ func Open() (*gorm.DB, error) {
 	db, err := gorm.Open(mysql.Open(s), &gorm.Config{
 		Logger: logger.Default.LogMode(logger.Info),
 	})
+
 	err = db.AutoMigrate(&StudentDB{})
 	if err != nil {
 		return nil, err
